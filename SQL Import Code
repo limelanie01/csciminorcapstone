@@ -1,0 +1,35 @@
+CREATE TABLE subway(
+Division varchar(3),
+SubwayLine varchar(17),
+StationName varchar(39),
+StaLatitude decimal(9,7),
+StaLongitude decimal(9,7),
+Route1 char(2),
+Route2 char(2),
+Route3 char(2),
+Route4 char(2),
+Route5 char(2),
+Route6 char(2),
+Route7 char(2),
+Route8 char(2),
+Route9 char(2),
+Route10 char(2),
+Route11 char(2),
+EntranceType varchar(13),
+Entry boolean,
+ExitOnly boolean,
+Vending boolean,
+Staffing varchar(6),
+StaffHours varchar(33),
+ADA boolean,
+ADANotes varchar(17),
+FreeCrossover boolean,
+NorthSouth varchar(30),
+EastWestStreet varchar(30),
+Corner varchar(4),
+EntranceLat decimal(9,7),
+EntranceLong decimal(9,7)
+)
+;
+
+\copy subway(Division, SubwayLine, StationName, StaLatitude, StaLongitude, Route1, Route2, Route3, Route4, Route5, Route6, Route7, Route8, Route9, Route10, Route11, EntranceType, Entry, ExitOnly, Vending, Staffing, StaffHours, ADA, ADANotes, FreeCrossover, NorthSouth, EastWestStreet, Corner, EntranceLat, EntranceLong) FROM '/Users/rydernocks/Desktop/school (hunter)/Semesters/FALL 2021/Computer Science Minor Capstone/subway.csv' DELIMITER ',' CSV HEADER
